@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="searchInput" placeholder="Type to search in Array" type="text" />
+    <button onclick="searchArrayHandler()">Search</button>
+    <div>
+      <ul id="resultList"></ul>
+    </div>
+    <script>
+      const data = [1, 2, 4, 6, 77, 4, 3, 3, 45];
+      const searchInput = document.getElementById("searchInput");
+      let indexOfSearchedInput = [];
+
+      const searchArrayHandler = () => {
+        const searchInputValue = Number(searchInput.value);
+        for (let i = 0; i < data.length; i++) {
+          if (data[i] === searchInputValue) {
+            indexOfSearchedInput.push(i);
+          }
+        }
+
+        const result = document.getElementById("resultList");
+
+        for (let i = 0; i < indexOfSearchedInput.length; i++) {
+          let list = document.createElement("li");
+          list.innerText = indexOfSearchedInput[i];
+          result.appendChild(list);
+        }
+        searchInput.value = "";
+      };
+    </script>
+  </body>
+</html>
