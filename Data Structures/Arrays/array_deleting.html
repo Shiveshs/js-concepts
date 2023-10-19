@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete</title>
+  </head>
+  <body>
+    <div>
+      <h1>Delete an element in the given array and print the new Array (only one occurence)</h1>
+      <h2>The array is [1, 2, 4, 6, 77, 4, 3, 3, 45]</h2>
+    </div>
+    <input id="deleteInput" placeholder="Type to delete in Array" type="text" />
+    <button onclick="deleteArrayHandler()">Delete</button>
+    <div>
+      <ul id="resultList"></ul>
+    </div>
+    <script>
+      const data = [1, 2, 4, 6, 77, 4, 3, 3, 45];
+      const deleteInput = document.getElementById("deleteInput");
+      const result = document.getElementById("resultList");
+      let newArray = [];
+      let list;
+      const deleteArrayHandler = () => {
+        if (list) {
+          result.removeChild(list);
+        }
+
+        const deleteInputValue = Number(deleteInput.value);
+        for (let i = data.indexOf(deleteInputValue); i < data.length; i++) {
+          if (
+            deleteInputValue !== "" ||
+            deleteInputValue !== undefined ||
+            deleteInputValue !== null
+          ) {
+            data[i] = data[i + 1];
+          } else {
+            alert("provide a valid value from above array");
+          }
+        }
+        data.length = data.length - 1;
+
+        for (let i = 0; i < data.length; i++) {
+          list = document.createElement("li");
+          list.innerText = data[i];
+          result.appendChild(list);
+        }
+        // deleteInput.value = undefined; Write a statement to reset the input value
+      };
+
+      //Direct Remove method to search an element's index inside array
+      // console.log(data.indexOf(3)); // will provide only the first occurence of the element
+    </script>
+  </body>
+</html>

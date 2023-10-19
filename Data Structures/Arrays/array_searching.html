@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Search</title>
   </head>
   <body>
+    <div>
+      <h1>Search an element in the given array and print the index value</h1>
+      <h2>The array is [1, 2, 4, 6, 77, 4, 3, 3, 45]</h2>
+    </div>
     <input id="searchInput" placeholder="Type to search in Array" type="text" />
     <button onclick="searchArrayHandler()">Search</button>
     <div>
@@ -14,25 +18,39 @@
     <script>
       const data = [1, 2, 4, 6, 77, 4, 3, 3, 45];
       const searchInput = document.getElementById("searchInput");
+      const result = document.getElementById("resultList");
       let indexOfSearchedInput = [];
-
+      let list;
       const searchArrayHandler = () => {
+        if (list) {
+          result.removeChild(list);
+        }
+
         const searchInputValue = Number(searchInput.value);
         for (let i = 0; i < data.length; i++) {
-          if (data[i] === searchInputValue) {
-            indexOfSearchedInput.push(i);
+          if (
+            searchInputValue !== "" ||
+            searchInputValue !== undefined ||
+            searchInputValue !== null
+          ) {
+            if (data[i] === searchInputValue) {
+              indexOfSearchedInput.push(i);
+            }
+          } else {
+            alert("provide a valid value from above array");
           }
         }
 
-        const result = document.getElementById("resultList");
-
         for (let i = 0; i < indexOfSearchedInput.length; i++) {
-          let list = document.createElement("li");
+          list = document.createElement("li");
           list.innerText = indexOfSearchedInput[i];
           result.appendChild(list);
         }
         searchInput.value = "";
       };
+
+      //Direct Search method to search an element's index inside array
+      console.log(data.indexOf(3)); // will provide only the first occurence of the element
     </script>
   </body>
 </html>

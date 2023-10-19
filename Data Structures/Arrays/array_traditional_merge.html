@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traditional Merge</title>
+  </head>
+  <body>
+    <div>
+      <h1>Merge two arrays without sort</h1>
+      <h2>The array is [1, 2, 4, 6], [77, 4, 3, 3, 45]</h2>
+    </div>
+    <button onclick="mergeArrayHandler()">Merge</button>
+    <div>
+      <ul id="resultList"></ul>
+    </div>
+    <script>
+      const data1 = [1, 2, 4, 6];
+      const data2 = [77, 4, 3, 3, 45];
+      let newData = [];
+      const result = document.getElementById("resultList");
+      let list;
+      const mergeArrayHandler = () => {
+        if (list) {
+          result.removeChild(list);
+        }
+
+        for (let i = 0; i < data1.length; i++) {
+          newData[i] = data1[i];
+        }
+        for (let i = 0; i < data2.length; i++) {
+          newData[i + data1.length] = data2[i];
+        }
+
+        for (let i = 0; i < newData.length; i++) {
+          list = document.createElement("li");
+          list.innerText = newData[i];
+          result.appendChild(list);
+        }
+      };
+    </script>
+  </body>
+</html>
