@@ -16,6 +16,7 @@ const onPushHandler = () => {
   //   li.innerText = value;
   //   showStack.appendChild(li);
   // }
+  pushInput.value = "";
   console.log(stack);
 };
 
