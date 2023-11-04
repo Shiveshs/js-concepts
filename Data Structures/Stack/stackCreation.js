@@ -10,12 +10,7 @@ const onPushHandler = () => {
   } else {
     alert("No more elements can be added.");
   }
-  //   const showStack = document.getElementById("showStack");
-  // for (value in stack) {
-  //   let li = document.createElement("li");
-  //   li.innerText = value;
-  //   showStack.appendChild(li);
-  // }
+
   pushInput.value = "";
   console.log(stack);
 };
