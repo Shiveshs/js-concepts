@@ -7,7 +7,7 @@ const push = (ele) => {
 };
 
 const pop = () => {
-  const poppedvalue = data[currentSize - 1];
+      const poppedvalue = data[currentSize - 1];
   currentSize -= 1;
   data.length = currentSize;
   return poppedvalue;
