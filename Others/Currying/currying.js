@@ -16,4 +16,4 @@ console.log(tripple);
 
 
 // more examples to do
-//Create a function which creates a crried function of any function
+//Create a function which creates a curried function of any function

@@ -54,12 +54,13 @@ console.log(person({name:"fred"}))
 _________________________________________
 
 
- //spread,function sayHi() {
-      var phrase; 
+ //spread,
+ function sayHi() {
+    var phrase; 
 
-      alert(phrase);
+    alert(phrase);
     
-      phrase = "Hello";
+    phrase = "Hello";
     }
     
     sayHi(); //
