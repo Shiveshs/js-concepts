@@ -3,6 +3,8 @@
 
 //write code here
 
+function
+
 // ques3
 let iter1 = new Iterator(["7","8","9"]);
 
@@ -11,6 +13,7 @@ while(iter1.nextValue()) {
     val = iter1.next()
     final += ","+val
 }
+
 
 
 //ques1
@@ -93,7 +96,7 @@ _________________________________________
     
     //-------------------- */
     
-     function factorial(value) {
+    function factorial(value) {
     let fact = 1;
     if(value < 0)
       return -1;
