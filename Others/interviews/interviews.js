@@ -1,51 +1,51 @@
-//Create an Iterator
+// //Create an Iterator
 
 
-//write code here
+// //write code here
 
-function
+// function
 
-// ques3
-let iter1 = new Iterator(["7","8","9"]);
+// // ques3
+// let iter1 = new Iterator(["7","8","9"]);
 
-while(iter1.nextValue()) {
-    let final;
-    val = iter1.next()
-    final += ","+val
-}
-
-
-
-//ques1
-remove_item([7,8,9]) // [9]
-remove_item([7,8,9], -1) // [9]
-remove_item([7,8,9], -2) // [8,9]
+// while(iter1.nextValue()) {
+//     let final;
+//     val = iter1.next()
+//     final += ","+val
+// }
 
 
-//
 
-let greet = {
-    name: "cat",
-    sayHello: ()=>{
-        console.log(this.name)
-    }
-}
-
-let sayHello = greet.sayHello;
-sayHello()
+// //ques1
+// remove_item([7,8,9]) // [9]
+// remove_item([7,8,9], -1) // [9]
+// remove_item([7,8,9], -2) // [8,9]
 
 
-// The below code snippet return hey steve. I want that to return hey frd
+// //
 
-function person (pers){
-if(pers == {name: "fred"}){
-    return "hey fred"
-}
-else
-return "hey steve"
-}
+// let greet = {
+//     name: "cat",
+//     sayHello: ()=>{
+//         console.log(this.name)
+//     }
+// }
 
-console.log(person({name:"fred"}))
+// let sayHello = greet.sayHello;
+// sayHello()
+
+
+// // The below code snippet return hey steve. I want that to return hey frd
+
+// function person (pers){
+// if(pers == {name: "fred"}){
+//     return "hey fred"
+// }
+// else
+// return "hey steve"
+// }
+
+// console.log(person({name:"fred"}))
 
 
 
@@ -57,182 +57,79 @@ console.log(person({name:"fred"}))
 _________________________________________
 
 
- //spread,
- function sayHi() {
-    var phrase; 
+//What is the output of the given code snippet?
 
-    alert(phrase);
+//  function sayHi() {
+//     var phrase; 
+
+//     alert(phrase);
     
-    phrase = "Hello";
-    }
+//     phrase = "Hello";
+//     }
     
-    sayHi(); //
+//     sayHi();
     
-    // ------------------------
+// ------------------------
+
     
-    var a = 2; //global scope
-    foo();  //3
-        
+    // var a = 2; 
+    // foo();  
+    //     
     
-    function foo() {
-        a = 3;
-        console.log(a);  // 3
-        var a; //undefined  //functional scope        
-                              
-    }
-    console.log(a); //2
+    // function foo() {
+    //     a = 3;
+    //     console.log(a); 
+    //     var a; 
+    //                           
+    // }
+    // console.log(a); 
     
-    // ------------
+// --------------------------
     
-    console.log("Start");  //start
+    // console.log("Start");  
     
-    setTimeout(() => {
-        console.log("Inside setTimeout"); //callback  //callback queue - ()=> {conso...} //2 sec
-    }, 2000);
+    // setTimeout(() => {
+    //     console.log("Inside setTimeout");
+    // }, 2000);
     
-    console.log("End"); //End  */
-    
-    //Inside setTimeout
-    
-    //-------------------- */
-    
-    function factorial(value) {
-    let fact = 1;
-    if(value < 0)
-      return -1;
-    
-    else if(value === 0 || value ===1){
-      return 1
-    }
-    else {
-      return factorial(value-1)
-    }
-    }
-    
-    console.log("factorial", factorial(5)); 
-    
-     //approach 1
-    fetch("https://jsfiddle.net/#&togetherjs=4LpnHjOdqz")
-    .then((data)=>data.json)
-    .then((finalData)=>console.log(finalData))
-    .catch((err)=>console.log("Data not found"))
-    .finally(()=>console.log("the data is either fetched or error has happened"))
-    
-    //approach 2
-    
-    const fetchData = async () => {
-      try {
-      const data = await fetch("https://jsfiddle.net/#&togetherjs=4LpnHjOdqz");
-      console.log(data)
-      }
-      catch {
-        console.log("Data not found");
-      }
-    } 
+    // console.log("End"); 
     
     
-    const obj = {
-      name: "shivesh",
-      org: "mphasis",
-      "address": {
-        "adr1": "some address",
-        "adr2": "some address 2"
-      }
-    }
+//-------------------- */
+
+  // What are generator functions in JS?
     
-    const obj2 = obj;
+    //What is recursion in JS? Can you write a function to get factorial of a number using recursion?
     
-    obj2.name = "shandilya";
+    // What are the different approaches to complete async operations, say fetching some data? 
+
+
+    //How do you handle errors in each case?
+
+    // When would you use promise chaining and when will you use async await? (follow up questions on the code)
     
-    // obj1.name
+    // What is finally keyword?
+    // what is shallow copying and Deep Copying in JS?
+
+    // What are some ways to achieve Deep Copy of a nested object in JS?
     
-    const obj3 = {
-      ...obj
-    };
+    // Mention Different ES6 features introduced in JS.
     
-    obj3.name = "Robert";
+    // Explain the lifecycle of a component in react. Cna you mention the life cycle methods used in class based approach?
     
-    console.log(obj)
-    console.log(obj3)
+    // How to implement componentWillUnmount in functional component using hooks?
+
+    //What happens if no dependency array is provided in useEffect? 
     
-    //spread
-    //rest
-    //destructing
-    //arrow
-    
-    
-    //Mounting
-    //constructor()
-    // getderivedStateFromProps()
-    // render()
-    //componentDidmount 
+    // can you write a basic skeleton of how would you use react-router in you app? You can use multiple components to demonstrate.
     
     
-    //Updation
-    //getDerivedStateFromProps()
-    // getSnapshotBeforeUpdate()
-    // render()
-    //componentDidUpdate()
-    
-    //unmounting
-    //componentWillUnmount()
+    // what is @storybook/addon-actions ? Why do we use it? Give me some usecase.
     
     
-     useEffect ( ()=> {
-      ()=>{
-      
-      }
-    }, []) 
+    // What is flexbox? How do you make an element in center using flex?
     
+    // What are different types of positions in css. give examples and explain the differences
     
-    
-    
-    
-    import {browserRouter, Routes, Route} from react-router-DOM;
-    import Home from "./home"
-    
-    const App = () => {
-      
-      <Routes>
-        <Route path="home" component="<Home/>"></Route>
-      </Routes>
-    }
-    
-    
-    
-    //_______________________________________
-    
-    index.js
-    
-    @storybook/addon-actions
-    
-    
-    // parent  --- 
-    daplay: flex
-    align-items : center //vertically
-    justify-content: center // horizontally
-      child 1
-      child 2
-      child 3 */
-    
-    // position
-    
-    //static
-    //relative
-    
-    <div class="parent">
-      <div class="child">Child</div>
-    </div>
-    
-    
-    .child {
-    position: "absolute"
-    bottom: "100px"
-    right: "100px"
-    } 
-    
-    
-    @media(max-width:600px ):{
-        background: "blue"
-    }
+// How would you write a css code for responsive web App, such that a particular color is being applied only for screen size less than 600 px
     
