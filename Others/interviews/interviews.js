@@ -54,7 +54,7 @@
 
 
 
-_________________________________________
+// _________________________________________
 
 
 //What is the output of the given code snippet?
@@ -133,3 +133,45 @@ _________________________________________
     
 // How would you write a css code for responsive web App, such that a particular color is being applied only for screen size less than 600 px
     
+// ______________________________________________________________________________________________________________
+
+//Write a function to return a deep copy of an object
+
+function createDeepCopy(obj) {
+    let newObj = {}
+        newObj =  JSON.parse(JSON.stringify(obj));
+        return newObj;
+    
+}
+
+let obj = {
+    name: "shivesh",
+    level1: {
+        level2: {
+            name: "level2",
+            level3: {
+                name: "level3"
+            }
+        }
+    }
+}
+
+
+
+let newObj = {...obj};
+
+console.log("obj", obj);
+console.log("newObj", newObj);
+
+// newObj.level1.level2.level3.name = "new Level 3";
+
+// console.log("obj", obj);
+// console.log("newObj", newObj);
+
+let deepCopiedObject = createDeepCopy(obj);
+
+deepCopiedObject.level1.level2.level3.name = "new deep level change";
+
+console.log("deepCopy", obj, "new Object", deepCopiedObject);
+
+//____________________________________________________________________________________________
