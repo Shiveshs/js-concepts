@@ -175,3 +175,33 @@ deepCopiedObject.level1.level2.level3.name = "new deep level change";
 console.log("deepCopy", obj, "new Object", deepCopiedObject);
 
 //____________________________________________________________________________________________
+
+//mask the email optimise this solution
+
+//shivesh@gmail.com
+//s*****h@g***l.com
+
+let str = "shivesh.shandilya@outlook.com";
+
+const maskStr = (str) => {
+let arrVal = str.split("");
+let finalArr = [];
+  for(let i=0; i<str.length ; i++){
+  	if(i===0 || i=== str.length-1){
+     finalArr.push(str[i]);
+    }
+    else finalArr.push("*");
+  }
+  
+  return finalArr.join("");
+}
+
+const maskedMail = (str) => {
+    let initialSplittedString = str.split("@");
+  let finalSplit = initialSplittedString[1].split(".");
+  let first = maskStr(initialSplittedString[0]);
+  let second = maskStr(finalSplit[0]);
+return first + "@" + second + "." +   finalSplit[1]
+}
+
+console.log(maskedMail(str))
