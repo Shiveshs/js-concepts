@@ -205,3 +205,30 @@ return first + "@" + second + "." +   finalSplit[1]
 }
 
 console.log(maskedMail(str))
+
+//Find the second largest number in an array
+
+function secondLargestNumber (arr) {
+    if(arr.length < 2){
+        return "Array is invalid for this"
+    }
+    let firstLargest = arr[0];
+    let secondLargest = arr[1];
+
+    if(firstLargest < secondLargest){
+        [firstLargest, secondLargest] = [secondLargest, firstLargest]
+    }
+    for(let i=2; i< arr.length; i++){
+        if(arr[i] > firstLargest){
+            secondLargest=firstLargest;
+            firstLargest = arr[i];
+        }
+        else if(arr[i] > secondLargest && arr[i] !== firstLargest ){
+            secondLargest = arr[i];
+        }
+    }
+    return secondLargest
+}
+
+console.log(secondLargestNumber([1,2,3,4,7,5]))
+
