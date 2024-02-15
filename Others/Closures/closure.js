@@ -72,13 +72,33 @@ playCreditGame();
 
 //IIFE with a closure to count after a certain time using settimeout and var keyword
 
-const a = ((limit)=>{
-    for(var i = 0; i<=limit; i++) {
-        //another IIFE closure inside which setTimeout resides
-        ((i)=>{
-            setTimeout(()=>console.log(i), i*1000)
-        })(i)
+// const a = ((limit)=>{
+//     for(var i = 0; i<=limit; i++) {
+//         //another IIFE closure inside which setTimeout resides
+//         ((i)=>{
+//             setTimeout(()=>console.log(i), i*1000)
+//         })(i)
         
-    }
-})(8)
+//     }
+// })(8)
 
+//_______________________________________________________
+
+// function createBase(base) {
+//   return function (val){
+//     console.log(val+base)
+//   }
+// }
+
+// var addSix = createBase(6);
+// addSix(10);
+
+function outerF(outer) {
+  return function innerF(inner){
+    return inner+outer
+  }
+}
+
+let addSix = outerF(1);
+console.log(addSix(10))
+console.log(addSix(18))
